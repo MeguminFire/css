@@ -177,97 +177,94 @@
     <p>&copy; 2026 Inside Your Computer • Created for beginners by MeguminFire</p>
   </footer>
   <script>
-    // Section navigation and smooth transitions
-    function showSection(sectionId, btn) {
-      document.querySelectorAll('.main-section').forEach(sec => {
-        sec.classList.remove('active-section');
-      });
-      document.getElementById(sectionId).classList.add('active-section');
-      // Highlight the active nav button
-      document.querySelectorAll('.topnav-btn').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
-    }
-
-    // Part info with true images
+    // Part info with real, authentic images for each hardware part
     const PARTS = {
       'cpu': {
         name: 'CPU (Central Processing Unit)',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Intel_CPU_Core_i7_3770K_IMG_6633.JPG',
-        alt: 'CPU (Processor) - realistic',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Intel_i7_CPU_4771_top_improved.png',
+        alt: 'Photo of CPU - actual computer part',
         desc: `<span>
           <b>The "brain" of the computer.</b><br>
-          The CPU does all the calculations and follows every instruction from programs and the operating system.<br><br>
-          <em>Example:</em> Like a teacher in a school, directing and deciding what everyone (other parts) should do.
+          The CPU does all the calculations and follows instructions from programs and the operating system.<br><br>
+          <em>Example:</em> Like a teacher in a school, directing and deciding what everyone (other computer parts) should do.
         </span>`
       },
       'ram': {
         name: 'RAM (Random Access Memory)',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Desktop_DDR_SDRAM_module.jpg',
-        alt: 'RAM Stick',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/2GB_DDR2_RAM_by_Micron_Technology.jpg',
+        alt: 'Photo of RAM stick',
         desc: `<span>
           <b>Short-term memory.</b><br>
-          RAM temporarily stores information and programs your computer is using right now.<br><br>
-          <em>Example:</em> Like the top of your desk: the more space, the more you can work on at once!
+          RAM temporarily stores what the computer is using right now. When power is off, it forgets everything.<br><br>
+          <em>Example:</em> Like the top of your desk—the more space you have, the more you can work on at once.
         </span>`
       },
       'storage': {
         name: 'Storage (Hard Drive or SSD)',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Hard_disk_dismantled.jpg',
-        alt: 'Open Hard Drive',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/2.5_inch_SATA_hard_drive.jpg',
+        alt: 'Photo of a 2.5 inch hard disk drive',
         desc: `<span>
           <b>Long-term memory.</b><br>
-          Here’s where your files, games, photos, and system are saved.<br><br>
-          <em>Example:</em> Like a giant filing cabinet; everything is kept even when the computer is switched off.
+          Storage is where your files, games, photos, and system live when the computer is off.<br><br>
+          <em>Example:</em> Like a giant filing cabinet—everything is kept until you throw it away.
         </span>`
       },
       'gpu': {
         name: 'Graphics Card (GPU)',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/ATI-9800pro.jpg',
-        alt: 'GPU (Graphics Card)',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Nvidia_GeForce_GTX_1080_Front.jpg',
+        alt: 'Photo of Graphics Card (GPU) - Nvidia GTX',
         desc: `<span>
           <b>Draws everything you see.</b><br>
-          The GPU renders images, video, and 3D graphics. Essential for gaming and design.<br><br>
+          The GPU renders images, videos, and animations, especially for games and creative work.<br><br>
           <em>Example:</em> Like an artist hired to make sure your screen looks beautiful and moves smoothly!
         </span>`
       },
       'motherboard': {
         name: 'Motherboard',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Gigabyte_GA-Z87X-UD3H_%2813455530455%29.jpg',
-        alt: 'Motherboard',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Motherboard_Diagram-en.svg',
+        alt: 'Diagram layer of a real motherboard',
         desc: `<span>
           <b>The backbone.</b><br>
-          The motherboard connects all hardware parts, letting them talk with each other.<br><br>
+          The motherboard connects all the physical hardware parts together, letting them communicate.<br><br>
           <em>Example:</em> Like the halls and rooms in a school where everyone meets and exchanges information.
         </span>`
       },
       'psu': {
         name: 'Power Supply (PSU)',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/7/77/ATX_power_supply_interior-1000.jpg',
-        alt: 'Power Supply Unit',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/d/d0/ATX_power_supply_01.jpg',
+        alt: 'Photo of a real Power Supply Unit',
         desc: `<span>
           <b>Powers every part.</b><br>
-          Converts wall electricity into the right kind for the computer’s parts.<br><br>
-          <em>Example:</em> Like the school’s electric company, ensuring everyone can work.
+          Converts wall electricity into safe, useful power for the computer’s sensitive circuits.<br><br>
+          <em>Example:</em> Like the main breaker and transformer for a building.
         </span>`
       },
       'peripherals': {
         name: 'Peripherals (Monitor, Keyboard, Mouse, etc.)',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Computermouseandkeyboard.jpg',
-        alt: 'Monitor, mouse, and keyboard',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Computermouse_and_keyboard.jpg',
+        alt: 'Photo of monitor, mouse, and keyboard',
         desc: `<span>
           <b>How you interact.</b><br>
-          Things you touch and see—monitor, keyboard, mouse, webcam, speakers.<br><br>
-          <em>Example:</em> Like your eyes (monitor), hands (keyboard, mouse), and voice/ears (mic, speakers) for the computer!
+          Monitors, keyboards, mice, printers, webcams, speakers: the intermediary between you and the computer.<br><br>
+          <em>Example:</em> Like your eyes (monitor), hands (keyboard/mouse), and voice/ears (mic, speakers) for the computer.
         </span>`
       }
     };
+
+    function showSection(sectionId, btn) {
+      document.querySelectorAll('.main-section').forEach(sec => {
+        sec.classList.remove('active-section');
+      });
+      document.getElementById(sectionId).classList.add('active-section');
+      document.querySelectorAll('.topnav-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
     function showPart(part) {
-      // Highlight the selected part button
       document.querySelectorAll('.partnav-btn').forEach(btn => btn.classList.remove('active-part'));
       const btns = Array.from(document.querySelectorAll('.partnav-btn'));
       const btn = btns.find(b => b.textContent.toLowerCase().includes(part));
       if (btn) btn.classList.add('active-part');
-      // Show part detail
       const box = document.getElementById('part-detail');
       if (PARTS[part]) {
         box.innerHTML = `
@@ -281,8 +278,6 @@
         `;
       }
     }
-
-    // On page load: show first section and first part
     document.addEventListener('DOMContentLoaded', () => {
       showSection('what', document.querySelector('.topnav-btn.active'));
       showPart('cpu');
