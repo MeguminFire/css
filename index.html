@@ -2,51 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>All About Computers</title>
+    <title>Inside Your Computer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>All About Computers</h1>
-        <p>Your quick guide to the world of computers.</p>
+        <h1>Inside Your Computer</h1>
+        <nav>
+            <button class="topnav-btn" onclick="showSection('what')">What is a Computer?</button>
+            <button class="topnav-btn" onclick="showSection('parts')">Parts of a Computer</button>
+            <button class="topnav-btn" onclick="showSection('types')">Types of Computers</button>
+            <button class="topnav-btn" onclick="showSection('troubleshoot')">Troubleshooting</button>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#what">What is a Computer?</a></li>
-            <li><a href="#parts">Main Parts</a></li>
-            <li><a href="#types">Types of Computers</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="what">
+        <!-- Section 1: What is a Computer? -->
+        <section id="what" class="main-section">
             <h2>What is a Computer?</h2>
             <p>
-                A computer is an electronic device that processes data and performs tasks according to a set of instructions, called programs. Computers are used for a variety of purposes, including communication, entertainment, work, and learning.
+                A computer is an electronic device that follows instructions to process data, solve problems, and perform tasks—fast and accurately. 
+            </p>
+            <p>
+                Computers understand instructions, called programs or software, and can perform calculations, store information, and connect people all around the world.
+            </p>
+            <h3>Detailed Example (for everyone):</h3>
+            <p>
+                Imagine a computer like a super-smart, ultra-fast chef. You give it a recipe (the program), ingredients (the data), and it quickly cooks up the dish (the result)—always following your instructions, step by step.
             </p>
         </section>
-        <section id="parts">
-            <h2>Main Parts of a Computer</h2>
-            <ul>
-                <li><strong>CPU</strong> (Central Processing Unit): the brain of the computer.</li>
-                <li><strong>RAM</strong> (Random Access Memory): short-term memory for quick data.</li>
-                <li><strong>Storage</strong>: hard drives or SSDs for saving data long-term.</li>
-                <li><strong>Motherboard</strong>: connects all components together.</li>
-                <li><strong>Monitor</strong>, <strong>keyboard</strong>, and <strong>mouse</strong>: input and output devices.</li>
-            </ul>
+
+        <!-- Section 2: Parts of a Computer -->
+        <section id="parts" class="main-section" style="display:none;">
+            <h2>Parts of a Computer</h2>
+            <div class="parts-buttons">
+                <button onclick="showPart('cpu')">CPU</button>
+                <button onclick="showPart('ram')">RAM</button>
+                <button onclick="showPart('storage')">Storage</button>
+                <button onclick="showPart('gpu')">Graphics Card (GPU)</button>
+                <button onclick="showPart('motherboard')">Motherboard</button>
+                <button onclick="showPart('psu')">Power Supply</button>
+                <button onclick="showPart('peripherals')">Peripherals</button>
+            </div>
+            <div id="part-detail" class="part-detail">
+                <!-- Details will be shown here -->
+                <h3>Pick a part above to see details!</h3>
+            </div>
         </section>
-        <section id="types">
+
+        <!-- Section 3: Types of Computers -->
+        <section id="types" class="main-section" style="display:none;">
             <h2>Types of Computers</h2>
             <ul>
-                <li>Desktop Computers</li>
-                <li>Laptops and Notebooks</li>
-                <li>Tablets</li>
-                <li>Smartphones</li>
-                <li>Supercomputers</li>
+                <li>
+                    <strong>Desktop:</strong> A personal computer that stays on a desk. <br>
+                    <span class="example">Example: The computer in an office or at home, often with a separate monitor and keyboard.</span>
+                </li>
+                <li>
+                    <strong>Laptop/Notebook:</strong> Portable computers you can carry anywhere. <br>
+                    <span class="example">Example: A laptop you take to school or work, with a built-in screen and keyboard.</span>
+                </li>
+                <li>
+                    <strong>Tablet:</strong> Touchscreen computers with no physical keyboard.<br>
+                    <span class="example">Example: An iPad or Android tablet you can use on the sofa or take on a trip.</span>
+                </li>
+                <li>
+                    <strong>Smartphone:</strong> Mini-computers in your pocket to call, text, and browse.<br>
+                    <span class="example">Example: Your iPhone or Samsung Galaxy phone.</span>
+                </li>
+                <li>
+                    <strong>Server:</strong> Powerful computers that provide services for many other computers.<br>
+                    <span class="example">Example: Computers that run websites like Google or manage online games.</span>
+                </li>
             </ul>
+        </section>
+
+        <!-- Section 4: Troubleshooting -->
+        <section id="troubleshoot" class="main-section" style="display:none;">
+            <h2>Simple Troubleshooting Tips</h2>
+            <ul>
+                <li>
+                    <strong>Computer won’t turn on:</strong><br>
+                    <span class="simple-fix">
+                        - Make sure it’s plugged in.<br>
+                        - Press the power button firmly.<br>
+                        - Check if the power strip or outlet works (try another device).
+                    </span>
+                </li>
+                <li>
+                    <strong>Frozen or slow computer:</strong><br>
+                    <span class="simple-fix">
+                        - Try restarting the computer.<br>
+                        - Close any extra programs or browser tabs.<br>
+                        - Run a virus scan if possible.
+                    </span>
+                </li>
+                <li>
+                    <strong>No internet connection:</strong><br>
+                    <span class="simple-fix">
+                        - Make sure Wi-Fi is on and connected.<br>
+                        - Restart the modem/router.<br>
+                        - Try connecting another device, like your phone.
+                    </span>
+                </li>
+                <li>
+                    <strong>Screen is black but computer is on:</strong><br>
+                    <span class="simple-fix">
+                        - Wiggle the mouse or press a key (it might be asleep).<br>
+                        - Check if the monitor cable is plugged in.<br>
+                        - Try turning the monitor off and on.
+                    </span>
+                </li>
+                <li>
+                    <strong>Weird noises or overheating:</strong><br>
+                    <span class="simple-fix">
+                        - Make sure vents aren’t blocked.<br>
+                        - Clean dust using a can of air (with the computer off and unplugged).<br>
+                        - Ask for help if you don’t know how or it’s still noisy—could be a fan or hard drive issue.
+                    </span>
+                </li>
+            </ul>
+            <p class="tip"><strong>Tip:</strong> If you’re not sure what to do, write down what happened and ask an adult or support person for help. Don’t worry—everyone gets stuck sometimes!</p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 All About Computers</p>
+        <p>&copy; 2026 Inside Your Computer</p>
     </footer>
+
+    <script>
+        // Navigation section switching
+        function showSection(sectionId) {
+            document.querySelectorAll('.main-section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Part descriptions
+        const PARTS = {
+            'cpu': {
+                name: 'CPU (Central Processing Unit)',
+                desc: `The <strong>CPU</strong> is like the "brain" of your computer. It's responsible for thinking, making decisions, and running programs.<br><br>
+                <span class="example"><em>Example:</em> Imagine the CPU is a chef in a kitchen. Every time you ask the chef (the computer) to cook a dish (run a program), the chef (CPU) follows your instructions and prepares the meal as quickly as possible.</span>`
+            },
+            'ram': {
+                name: 'RAM (Random Access Memory)',
+                desc: `RAM is your computer’s "short-term memory." It stores information the CPU is using right now.<br><br>
+                <span class="example"><em>Example:</em> If your computer is like a desk, then RAM is the space on top of your desk where you keep things you're working on. If your desk (RAM) is small, you can only work on a few things at a time before it gets crowded and slow.</span>`
+            },
+            'storage': {
+                name: 'Storage (Hard Drive or SSD)',
+                desc: `The storage is your computer’s "long-term memory." This is where files, programs, photos, and games live even when the computer is off.<br><br>
+                <span class="example"><em>Example:</em> Your storage is like a giant filing cabinet. You put all your important things in here so you can find them later, even after turning off your computer.</span>`
+            },
+            'gpu': {
+                name: 'Graphics Card (GPU)',
+                desc: `The GPU handles all the things you see on your screen—especially games, videos, and fancy graphics.<br><br>
+                <span class="example"><em>Example:</em> If your CPU is a chef, the GPU is a cake decorator! When you want your dessert (screen) to look amazing, you ask the decorator (GPU) for help!</span>`
+            },
+            'motherboard': {
+                name: 'Motherboard',
+                desc: `The motherboard is like the "body" or backbone of your computer. It connects all the different parts so they can talk to each other.<br><br>
+                <span class="example"><em>Example:</em> If computer parts were people, the motherboard would be the room they're all in, letting everyone pass notes back and forth.</span>`
+            },
+            'psu': {
+                name: 'Power Supply (PSU)',
+                desc: `The Power Supply gives electricity to all the computer's parts, kind of like a power strip for your whole machine.<br><br>
+                <span class="example"><em>Example:</em> If your computer was a city, the power supply would be the power company delivering electricity to every building.</span>`
+            },
+            'peripherals': {
+                name: 'Peripherals (Monitor, Keyboard, Mouse, etc.)',
+                desc: `Peripherals are all the extras that help you use your computer—like the mouse, keyboard, speakers, and monitor.<br><br>
+                <span class="example"><em>Example:</em> If your computer was a person, peripherals would be the hands (keyboard), eyes (monitor), and mouth/ears (speakers & microphone)!</span>`
+            }
+        };
+        function showPart(part) {
+            const box = document.getElementById('part-detail');
+            if (PARTS[part]) {
+                box.innerHTML = `<h3>${PARTS[part].name}</h3><p>${PARTS[part].desc}</p>`;
+            }
+        }
+        // Show first section by default
+        showSection('what');
+    </script>
 </body>
 </html>
