@@ -89,7 +89,6 @@ main {
   max-width: 100%;
   transition: opacity 0.43s, transform 0.32s, box-shadow 0.25s;
 }
-
 .active-section {
   display: block;
   opacity: 1;
@@ -174,10 +173,10 @@ h2 {
   align-items: flex-start;
 }
 .part-img {
-  width: 92px;
-  height: 92px;
+  width: 108px;
+  height: 108px;
   border-radius: 11px;
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: 0 1.5px 14px #3e72be44;
   margin-right: 10px;
   background: #091123;
