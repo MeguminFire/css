@@ -1,50 +1,114 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: #f4f4f4;
+    background: #f0f6fc;
     color: #222;
 }
 header {
-    background: #222;
-    color: #fff;
-    padding: 1.5em 1em;
+    background: #111e2e;
+    padding: 1.5em 1em 1em 1em;
     text-align: center;
+    color: #fff;
+}
+.topnav-btn {
+    background: #318cef;
+    color: #fff;
+    border: none;
+    margin: 0 5px 5px 0;
+    padding: 0.7em 1.2em;
+    border-radius: 4px 4px 0 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.topnav-btn:hover, .parts-buttons button:hover {
+    background: #225a99;
 }
 nav {
-    background: #42a5f5;
-    padding: 0.5em 0;
-    text-align: center;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 1em;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 main {
-    max-width: 650px;
-    margin: 2em auto;
+    max-width: 700px;
+    margin: 2em auto 3em auto;
     background: #fff;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(66,165,245,0.2);
+    padding: 2em 2em 1.2em 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 14px 0 #87a0b6;
+    min-height: 400px;
 }
 h1, h2 {
-    color: #1976d2;
+    color: #1862ab;
+    margin-top: 0;
+}
+h3 {
+    color: #225a99;
+    margin-bottom: 0.6em;
+}
+.parts-buttons {
+    margin-bottom: 1.4em;
+}
+.parts-buttons button {
+    background: #cde5fb;
+    border: 1px solid #318cef;
+    color: #222;
+    padding: 0.5em 0.9em;
+    margin: 0 4px 7px 0;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.part-detail {
+    border: 1px solid #cee0f9;
+    background: #f6faff;
+    border-radius: 7px;
+    padding: 1em;
+    min-height: 90px;
+    margin-top: 0.75em;
+}
+ul {
+    margin-left: 0;
+    padding-left: 1.2em;
+}
+li {
+    margin-bottom: 1.2em;
+}
+.example {
+    display: block;
+    color: #1862ab;
+    margin-top: 0.3em;
+    font-style: italic;
+}
+.simple-fix {
+    display: block;
+    color: #4e740b;
+    margin-top: 0.2em;
+}
+.tip {
+    background: #e6f8d6;
+    border-left: 6px solid #9dd856;
+    padding: 0.7em;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    color: #225a18;
 }
 footer {
     text-align: center;
-    padding: 1em 0;
-    background: #eee;
+    color: #7a8da4;
+    padding: 1em 0 0.5em 0;
+    background: transparent;
+    font-size: 0.95em;
     position: fixed;
     width: 100%;
     bottom: 0;
+    left: 0;
+}
+@media (max-width: 600px) {
+    main {
+        max-width: 97vw;
+        padding: 1.2em 0.4em 1.2em 0.4em;
+    }
+    nav {
+        font-size: 0.96em;
+    }
 }
